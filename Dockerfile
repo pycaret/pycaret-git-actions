@@ -4,9 +4,7 @@ WORKDIR /app
 
 ADD . /app
 
-RUN apt-get install sudo
-
-RUN sudo apt-get install libgomp1
+RUN apt-get update && apt-get install -y libgomp1
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
