@@ -10,4 +10,4 @@ clf1 = setup(data, target = 'Purchase', session_id=123, silent=True, html=False)
 
 c = compare_models()
 
-save_model(c, 'Trained Model')
+save_model(c, 'model')
