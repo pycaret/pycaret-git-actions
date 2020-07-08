@@ -1,5 +1,5 @@
 import os, ast
-import pandas
+import pandas as pd
 
 dataset_path = "https://raw.githubusercontent.com/" + os.environ["GITHUB_REPOSITORY"] +"/master/dataset.csv"
 data = pd.read_csv(dataset_path)
