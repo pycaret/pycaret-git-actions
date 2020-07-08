@@ -1,0 +1,17 @@
+name: "PyCaret AutoML Git Action"
+description: "pycaret.classification"
+author: "Moez Ali"
+inputs:
+  myInput:
+    description: "Classification"
+    required: true
+    default: "zeroinputs"
+outputs:
+  myOutput:
+    description: "Output from the action"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: 'box'
+  color: 'blue'
