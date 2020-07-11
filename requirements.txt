@@ -1,1 +1,1 @@
-pycaret-nightly==0.18
+pycaret-nightly==0.20
