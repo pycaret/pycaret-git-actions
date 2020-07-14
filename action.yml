@@ -2,10 +2,14 @@ name: "PyCaret AutoML Git Action"
 description: "pycaret.classification"
 author: "Moez Ali"
 inputs:
-  myInput:
-    description: "Classification"
+  DATASET:
+    description: "Dataset for Training"
     required: true
-    default: "target-variable"
+    default: "juice"
+  TARGET:
+    description: "Target variable"
+    required: true
+    default: "Purchase"        
 outputs:
   myOutput:
     description: "Output from the action"

@@ -1,17 +1,18 @@
 import os, ast
 import pandas as pd
 
-dataset_path = "https://raw.githubusercontent.com/" + os.environ["GITHUB_REPOSITORY"] +"/master/dataset.csv"
+dataset = os.environ["INPUT_DATASET"]
+target = os.environ["INPUT_TARGET"]
+
+dataset_path = "https://raw.githubusercontent.com/" + os.environ["GITHUB_REPOSITORY"] + "/master/" + os.environ["INPUT_DATASET"] + '.csv'
 data = pd.read_csv(dataset_path)
 data.head()
 
-target = os.environ["INPUT_MYINPUT"]
-
 from pycaret.classification import *
-clf1 = setup(data, target =  target, session_id=123, silent=True, html=False, log_experiment=True, experiment_name='exp1')
+clf1 = setup(data, target = target, session_id=123, silent=True, html=False, log_experiment=True, experiment_name='exp_github')
 
 c = compare_models()
 
 save_model(c, 'model')
 
-logs_exp1 = get_logs(save=True)
+logs_exp_github = get_logs(save=True)
