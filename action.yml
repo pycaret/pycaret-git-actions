@@ -5,7 +5,7 @@ inputs:
   myInput:
     description: "Classification"
     required: true
-    default: "zeroinputs"
+    default: "target-variable"
 outputs:
   myOutput:
     description: "Output from the action"
