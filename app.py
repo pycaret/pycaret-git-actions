@@ -5,7 +5,7 @@ dataset_path = "https://raw.githubusercontent.com/" + os.environ["GITHUB_REPOSIT
 data = pd.read_csv(dataset_path)
 data.head()
 
-target = ast.literal_eval(os.environ["INPUT_MYINPUT"])
+target = os.environ["INPUT_MYINPUT"]
 
 from pycaret.classification import *
 clf1 = setup(data, target =  target, session_id=123, silent=True, html=False, log_experiment=True, experiment_name='exp1')
