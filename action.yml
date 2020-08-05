@@ -1,5 +1,5 @@
 name: "PyCaret AutoML Git Action"
-description: "pycaret.classification"
+description: "A simple example of AutoML created using PyCaret 2.0"
 author: "Moez Ali"
 inputs:
   DATASET:
@@ -7,7 +7,7 @@ inputs:
     required: true
     default: "juice"
   TARGET:
-    description: "Target variable"
+    description: "Name of Target variable"
     required: true
     default: "Purchase"        
 outputs:
