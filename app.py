@@ -16,8 +16,10 @@ elif usecase == 'classification':
 
 exp1 = setup(data, target = target, session_id=123, silent=True, html=False, log_experiment=True, experiment_name='exp_github')
 
-c = compare_models()
+best = compare_models()
 
-save_model(c, 'model')
+best_model = finalize_model(best)
+
+save_model(best_model, 'model')
 
 logs_exp_github = get_logs(save=True)
