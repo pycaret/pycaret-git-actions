@@ -9,7 +9,11 @@ inputs:
   TARGET:
     description: "Name of Target variable"
     required: true
-    default: "Purchase"        
+    default: "Purchase"     
+  USECASE:
+    description: "Use-case Classification or Regression"
+    required: true
+    default: "classification"     
 outputs:
   myOutput:
     description: "Output from the action"
